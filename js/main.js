@@ -1,7 +1,10 @@
-loadScript("js/dojo/dojo.js");
+(function(app)
+{
+    app.loadScript("js/dojo/dojo.js");
 
-function main() {
-	const dojo = new Dojo('#app-fizzbuzz');
+    app.main = function() {
+            const dojo = new app.Dojo('#app-fizzbuzz');
 
-	dojo.fizzBuzz(1, 101);
-}
+            dojo.fizzBuzz(1, 101);
+    }
+})(window.app);
