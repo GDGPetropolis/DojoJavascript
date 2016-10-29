@@ -7,5 +7,3 @@ function main() {
 
 	dojo.fizzBuzz(numbers);
 }
-
-// main();
