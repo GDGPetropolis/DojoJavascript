@@ -1,7 +1,7 @@
 loadScript("js/dojo/dojo.js");
 
 function main() {
-	var dojo = new Dojo();
+	const dojo = new Dojo();
 
 	dojo.fizzBuzz(1, 101);
 }
