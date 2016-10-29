@@ -1,9 +1,9 @@
 var Dojo = function()
 {};
 
-Dojo.prototype.fizzBuzz = function(numbers)
+Dojo.prototype.fizzBuzz = function(start, stop)
 {
-    for (i = 0; i < numbers.length; i++)
+    for (i = start; i < stop; i++)
     {
         if(i % 3 == 0 && i % 5 == 0)
         {
