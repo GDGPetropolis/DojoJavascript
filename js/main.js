@@ -1,9 +1,10 @@
-loadScript("js/dojo/dojo.js");
+(function(app)
+{
+    app.loadScript("js/dojo/dojo.js");
 
-function main() {
-	var dojo = new Dojo();
+    app.main = function() {
+            const dojo = new app.Dojo('#app-fizzbuzz');
 
-	var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13];
-
-	dojo.fizzBuzz(numbers);
-}
+            dojo.fizzBuzz(1, 101);
+    }
+})(window.app);
