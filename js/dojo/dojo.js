@@ -1,39 +1,25 @@
 (function(app)
 {
-    app.Dojo = function(selector)
-    {
-        this.selector = selector;
-    };
+    app.Dojo = function()
+    {};
 
-    app.Dojo.prototype.fizzBuzz = function(start, stop)
+    app.Dojo.prototype.fizzBuzz = function(number)
     {
-        let app = document.querySelectorAll(this.selector)[0];
-        let list = document.createElement('ul');
+        let result = number.toString();
 
-        for (let i = start; i < stop; i++)
+        if((number % 3 == 0) && (number % 5 == 0))
         {
-            let item = document.createElement('li');
-
-            if(i % 3 == 0 && i % 5 == 0)
-            {
-                item.innerHTML = "FizzBuzz";
-            }
-            else if(i % 3 == 0)
-            {
-                item.innerHTML = "Fizz";
-            }
-            else if (i % 5 == 0)
-            {
-                item.innerHTML = "Buzz";
-            }
-            else
-            {
-                item.innerHTML = i.toString();
-            }
-
-            list.appendChild(item);
+            result = "FizzBuzz";
+        }
+        else if(number % 3 == 0)
+        {
+            result = "Fizz";
+        }
+        else if (number % 5 == 0)
+        {
+            result = "Buzz";
         }
 
-        app.appendChild(list);
+        return result;
     }
 })(window.app);
