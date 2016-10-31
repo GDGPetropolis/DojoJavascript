@@ -5,11 +5,16 @@
 		<script src="js/import.js"></script>
 	</head>
 	<body>
-		<h1>GDG Petrópolis</h1>
-		<input id="Run" type="button" value="Run"
-				onclick="app.main();" />
-
+		<h1><img src="img/GDG_Petropolis.png" alt="GDG Petrópolis"/></h1>
 		<div id="app-fizzbuzz">
-                </div> <!-- #app-fizzbuzz -->
+			<h1>01. FizzBuzz</h1>
+			Inicio:
+			<input type="number" id="fizzbuzz-start" name="fizzbuzz-start"><br>
+			Fim:
+			<input type="number" id="fizzbuzz-stop" name="fizzbuzz-stop">
+			<input id="Run" type="button" value="Run" onclick="app.fizzbuzz_html(document.getElementById('fizzbuzz-start').value, document.getElementById('fizzbuzz-stop').value);"/>
+			<div class="result">
+			</div>
+		</div>
 	</body>
 </html>
